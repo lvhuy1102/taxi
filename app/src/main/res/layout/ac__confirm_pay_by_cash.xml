@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_demoapp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Confirm?"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_header" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_horizontal_large"
+            android:gravity="center_horizontal"
+            android:text="@string/question"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_xlarge" />
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_horizontal"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_horizontal_large"
+                android:orientation="horizontal">
+
+                <com.hcpt.taxinear.widget.TextViewRaleway
+                    android:id="@+id/btnCancel"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/yeallow_demoapp"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/padding_vertical"
+                    android:text="No, I didn't"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+                <com.hcpt.taxinear.widget.TextViewRaleway
+                    android:id="@+id/btnConfirm"
+                    style="@style/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_horizontal"
+                    android:layout_weight="1"
+                    android:background="@color/yeallow_demoapp"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/padding_vertical"
+                    android:text="Yes,  I did"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

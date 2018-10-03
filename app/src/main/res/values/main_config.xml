@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Cabs</string>
+
+
+    <string name="web_service_config">http://demo.hicominfo.com:8888/taxi-jayawardhana/api/</string>
+    <!--<string name="web_service_config">http://192.168.10.100:8888/hicommart-taxinear/api/</string>-->
+    <!--<string name="web_service_config">http://hicomsolutions.hicommart.com/taxinear/api/</string>-->
+
+    <string name="facebook_id">988560674516557</string> <!--hicom.register@gmail.com-->
+
+    <string name="key_map">AIzaSyATRVZ4CV65OcRYdsP_kxwVBRCC5BII4Ro</string> <!--hicomdeveloper@gmail.com-->
+
+    <string name="stripe_publishable_key">pk_test_PHpVnGDg1yo77vX8orbT4arV</string>
+
+</resources>

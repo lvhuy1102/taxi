@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_xlargex"
+    android:background="@color/blue_demoapp">
+
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:text="@string/ic_back"
+        android:src="@drawable/ic_header_back" />
+
+    <com.hcpt.taxinear.widget.TextViewRaleway
+        android:id="@+id/lblTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/space_large"
+        android:layout_toRightOf="@+id/btnBack"
+        android:textColor="@color/white"
+        android:layout_centerVertical="true"
+        android:textStyle="bold"
+        android:textSize="@dimen/text_size_title" />
+</RelativeLayout>

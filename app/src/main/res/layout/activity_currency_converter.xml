@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_demoapp"
+    tools:context=".activities.CurrencyConverterActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header_back" />
+
+    <RadioGroup
+        android:layout_marginTop="@dimen/dimen_1x"
+        android:layout_marginLeft="@dimen/dimen_2x"
+        android:layout_marginRight="@dimen/dimen_2x"
+        android:id="@+id/rdgCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/currencyUSD"
+            android:text="USD "
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/currencyLKR"
+            android:text="LKR "
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/btnConverter"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="@dimen/btn_height"
+        android:layout_gravity="left"
+        android:layout_marginBottom="@dimen/margin_vertical_large"
+        android:layout_marginLeft="39dp"
+        android:layout_marginRight="@dimen/margin_horizontal_xxlarge"
+        android:layout_marginTop="@dimen/space_normal"
+        android:textAllCaps="true"
+        android:background="@color/yeallow_demoapp"
+        android:gravity="center"
+        android:text="@string/lbl_converter"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_large" />
+
+</LinearLayout>

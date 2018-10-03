@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llBottom"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_80"
+                android:padding="@dimen/dimen_05x"
+                android:visibility="gone">
+
+                <com.hcpt.taxinear.widget.TextViewPixeden
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/dontCloseScreen"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <fragment
+                    android:id="@+id/fragMaps"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/dimen_05x"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white70">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dimen_05x">
+
+                            <ImageView
+                                android:id="@+id/imgBack"
+                                android:layout_width="10dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_chevron_left_white" />
+
+                            <com.hcpt.taxinear.widget.TextViewPixeden
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/dimen_05x"
+                                android:text="@string/cancel"
+                                android:textAllCaps="true"
+                                android:textColor="@color/gray3" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/cv_help"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="@dimen/dimen_05x"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white70"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="8dp">
+
+                            <ImageButton
+                                android:id="@+id/imgHelp"
+                                android:layout_width="23dp"
+                                android:layout_height="23dp"
+                                android:background="@drawable/ic_phone_grey" />
+
+                            <com.hcpt.taxinear.widget.TextViewPixeden
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/dimen_05x"
+                                android:text="@string/help"
+                                android:textAllCaps="true"
+                                android:textColor="@color/gray3" />
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+        <ScrollView
+            android:id="@+id/llBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dimen_1x">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_tiny"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="3">
+
+                    <TextView
+                        style="@style/text_14_white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="@string/lbl_seat"
+                        android:textStyle="bold" />
+
+                    <com.hcpt.taxinear.widget.TextViewRaleway
+                        android:id="@+id/tvSeat"
+                        style="@style/text_14_white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="left"
+                        android:text="" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_alignParentLeft="true"
+                        style="@style/text_14_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_to_b"
+                        android:textStyle="bold" />
+
+                    <com.hcpt.taxinear.widget.TextViewRaleway
+                        android:layout_toLeftOf="@id/tv_cowndown_time2"
+                        android:layout_toRightOf="@id/tv_title"
+                        android:id="@+id/lblStartLocation"
+                        style="@style/text_14_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:ellipsize="marquee"
+                        android:gravity="left"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:singleLine="true"
+                        android:text="" />
+                    <TextView
+                        android:visibility="gone"
+                        style="@style/text_14_white"
+                        android:id="@+id/tv_cowndown_time2"
+                        android:layout_marginRight="10dp"
+                        android:maxLines="1"
+                        android:layout_toLeftOf="@id/tv_cowndown_time"
+                        android:text="Time Waitting :"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:visibility="gone"
+                        style="@style/text_14_white"
+                        android:id="@+id/tv_cowndown_time"
+                        android:layout_alignParentRight="true"
+                        android:text="00:00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <com.hcpt.taxinear.widget.TextViewRaleway
+                        style="@style/text_14_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lblAlwayScreen"
+                        android:textColor="@color/yellow_dark"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_tiny"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone"
+                    android:weightSum="3">
+
+                    <TextView
+                        style="@style/text_14_white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="@string/lbl_to_b"
+                        android:textStyle="bold" />
+
+                    <com.hcpt.taxinear.widget.TextViewRaleway
+                        android:id="@+id/lblEndLocation"
+                        style="@style/text_14_white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.3"
+                        android:gravity="left"
+                        android:text="@string/lbl_ending_location2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone"
+                    android:weightSum="3">
+
+                    <TextView
+                        style="@style/text_14_white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="@string/lblDistance"
+                        android:textStyle="bold" />
+
+                    <com.hcpt.taxinear.widget.TextViewRaleway
+                        android:id="@+id/lblDistance"
+                        style="@style/text_14_white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.3"
+                        android:gravity="left"
+                        android:text="0 KM" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/dimen_1x"
+                    android:visibility="gone"
+                    android:weightSum="3">
+
+                    <TextView
+                        style="@style/text_14_white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.7"
+                        android:text="@string/lblTime"
+                        android:textSize="@dimen/text_size_normal"
+                        android:textStyle="bold" />
+
+                    <com.hcpt.taxinear.widget.TextViewRaleway
+                        android:id="@+id/lblTimes"
+                        style="@style/text_14_white"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.3"
+                        android:gravity="left"
+                        android:text="N/A"
+                        android:textSize="@dimen/text_size_normal" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/llDriver"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/img_size_passeger"
+                        android:layout_alignParentLeft="true"
+                        android:layout_toLeftOf="@+id/llButton">
+
+                        <ImageView
+                            android:id="@+id/imgPassenger"
+                            android:layout_width="@dimen/img_size_passeger"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/yeallow_demoapp"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dimen_1x"
+                            android:paddingRight="@dimen/dimen_1x">
+
+                            <com.hcpt.taxinear.widget.TextViewRaleway
+                                android:id="@+id/lblName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/primary" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imgCall"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_call" />
+
+                                    <ImageView
+                                        android:id="@+id/imgSms"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_sms" />
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/lblPhone"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text=""
+                                    android:textColor="@color/phone_trip"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/txtStar"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size_xlarge" />
+
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/ic_star_vote" />
+                                </LinearLayout>
+
+                                <RatingBar
+                                    android:id="@+id/ratingBar"
+                                    style="@style/userRatingBar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:clickable="false"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dimen_025x"
+                            android:layout_weight="2.3"
+                            android:gravity="right"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/btnStartTrip"
+                                android:layout_width="@dimen/img_size_passeger"
+                                android:layout_height="@dimen/img_size_passeger"
+                                android:background="@color/blue"
+                                android:gravity="center"
+                                android:padding="@dimen/dimen_1x"
+                                android:text="Begin"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:id="@+id/btnEndTrip"
+                                android:layout_width="@dimen/img_size_passeger"
+                                android:layout_height="@dimen/img_size_passeger"
+                                android:background="@color/blue"
+                                android:gravity="center"
+                                android:padding="@dimen/dimen_1x"
+                                android:text="End"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/llBottom"
+            android:layout_centerHorizontal="true"
+            android:background="@color/blue_80"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="5dp">
+
+            <ImageButton
+                android:background="@color/blue_80"
+                android:id="@+id/btn_start_waiting"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_timer_black_24dp"
+                android:visibility="visible" />
+
+            <ImageButton
+                android:background="@color/blue_80"
+                android:id="@+id/btn_end_waiting"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_timer_off_black_24dp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
